@@ -14,11 +14,10 @@ class Character(BaseModel):
     status: str
     species: str
 
-characters_list = [Character(id = "3", name = "Summer Smith", status = "Alive", species = "Human"),
-                   Character(id = "4", name = "Beth Smith", status = "Alive", species = "Human"),
-                   Character(id = "5", name = "Jerry Smith", status = "Alive", species = "Human")]
-
-
+characters_list = [Character(id = 3, name = "Summer Smith", status = "Alive", species = "Human"),
+                   Character(id = 4, name = "Beth Smith", status = "Alive", species = "Human"),
+                   Character(id = 5, name = "Jerry Smith", status = "Alive", species = "Human"),
+                   Character(id = 6, name	= "Abadango Cluster Princess", status=	"Alive", species=	"Alien")]
 
 
 @app.get("/characters")
@@ -34,3 +33,5 @@ async def charactersjson():
 
 async def names():
     return characters_list
+
+
