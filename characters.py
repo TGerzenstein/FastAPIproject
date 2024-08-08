@@ -20,7 +20,7 @@ characters_list = [Character(id = 3, name = "Summer Smith", status = "Alive", sp
                    Character(id = 6, name	= "Abadango Cluster Princess", status=	"Alive", species=	"Alien")]
 
 
-@app.get("/characters")
+@app.get("/character")
 
 async def charactersjson():
     return  [ {"id": 1, "name": "Rick Sanchez", "status": "Alive", "species":	"Human"}, 
@@ -35,3 +35,11 @@ async def names():
     return characters_list
 
 
+@app.get("/name/{id}")
+
+async def name(id: int):
+    names_list = filter(lambda name: name.id == id, characters_list)
+    try:
+        return list(names_list)[0]
+    except:
+        return {"Error": "User does not found"}
