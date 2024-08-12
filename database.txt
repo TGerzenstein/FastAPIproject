@@ -1,0 +1,37 @@
+
+
+Bootcamp:
+
+
+[
+    {
+        "nombre": "Ana",
+        "apellido": "Gómez",
+        "direccion": { 
+            calle: "Calle del Sol 123",
+        }
+    },
+    {
+        "nombre": "Luis",
+        "apellido": "Pérez",
+        "direccion": {
+            calle: "Avenida de la Libertad 456", 
+        } 
+    },
+    {
+        "nombre": "María",
+        "apellido": "Rodríguez",
+        "direccion": { 
+            calle: "Paseo de la Castellana 789",
+        }
+    }
+]
+
+
+// Commands:
+
+1. mongosh
+2. show dbs
+3. use "nombre"
+4. db
+
